@@ -25,7 +25,6 @@ jobs:
 
       - name: Install dotnet-ef tool
         run: dotnet tool install --global dotnet-ef --version 8.0.8
-            echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
 
       - name: Build with dotnet
         run: dotnet build ./Bibliocanto/Bibliocanto.csproj --configuration Release
@@ -35,7 +34,6 @@ jobs:
 
       - name: Restore dependencies
         run: dotnet restore ./Bibliocanto/Bibliocanto.csproj --source https://api.nuget.org/v3/index.json
-
 
       - name: Apply EF Core migrations
         run: dotnet ef database update --no-build --project ./BibliocantoTCC/Bibliocanto/Bibliocanto.csproj
