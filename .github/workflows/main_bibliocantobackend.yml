@@ -30,7 +30,7 @@ jobs:
         run: dotnet publish ./Bibliocanto/Bibliocanto.csproj -c Release -o ./publish
 
       - name: Apply EF Core migrations
-        run: dotnet ef database update --no-build --project ./Bibliocanto/Bibliocanto.csproj
+        run: dotnet ef database update --no-build --project ./Bibliocanto/Bibliocanto.csproj --startup-project ./Bibliocanto/Bibliocanto.csproj
         working-directory: ./Bibliocanto
         env:
           ConnectionStrings__DefaultConnection: ${{ secrets.DB_CONNECTION_STRING }}
