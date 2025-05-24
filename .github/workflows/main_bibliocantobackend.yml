@@ -29,6 +29,10 @@ jobs:
       - name: dotnet publish
         run: dotnet publish ./Bibliocanto/Bibliocanto.csproj -c Release -o ./publish
 
+      - name: Restore dependencies
+        run: dotnet restore ./Bibliocanto/Bibliocanto.csproj --source https://api.nuget.org/v3/index.json
+
+
       - name: Apply EF Core migrations
         run: dotnet ef database update --no-build --project ./BibliocantoTCC/Bibliocanto/Bibliocanto.csproj
         env:
