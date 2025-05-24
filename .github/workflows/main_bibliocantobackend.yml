@@ -12,6 +12,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      ConnectionStrings__DefaulConnection: ${{ secrets.DB_CONNECTION_STRING }}
     permissions:
       contents: read #This is required for actions/checkout
 
