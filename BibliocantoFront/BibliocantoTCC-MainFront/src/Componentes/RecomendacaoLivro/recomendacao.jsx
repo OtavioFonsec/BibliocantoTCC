@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import api from "../../services/api";
 import { useNavigate } from "react-router-dom";
-import "./Recomendacao.css";
+import "./recomendacao.css";
 
 const Recomendacao = ({idLivro}) => {
 
