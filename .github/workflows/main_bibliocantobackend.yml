@@ -30,10 +30,10 @@ jobs:
         run: dotnet publish ./Bibliocanto/Bibliocanto.csproj -c Release -o ./publish
 
       - name: Apply EF Core migrations
-        working-directory: ./Bibliocanto
-        run: dotnet ef database update --no-build
+        run: dotnet ef database update --no-build --project ./Bibliocanto/Bibliocanto.csproj
         env:
           ConnectionStrings__DefaultConnection: ${{ secrets.DB_CONNECTION_STRING }}
+
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
