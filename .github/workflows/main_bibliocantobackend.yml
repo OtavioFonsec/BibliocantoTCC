@@ -36,7 +36,7 @@ jobs:
         run: dotnet restore ./Bibliocanto/Bibliocanto.csproj --source https://api.nuget.org/v3/index.json
 
       - name: Apply EF Core migrations
-        run: dotnet ef database update --no-build --project ./BibliocantoTCC/Bibliocanto/Bibliocanto.csproj
+        run: dotnet ef database update --no-build --project ./Bibliocanto/Bibliocanto.csproj
         env:
           ConnectionStrings__DefaultConnection: ${{ secrets.DB_CONNECTION_STRING }}
 
