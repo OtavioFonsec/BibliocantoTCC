@@ -12,12 +12,19 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Primeiro tenta pegar do appsettings.json, sen√£o pega da vari√°vel de ambiente
+var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
+
+// Registra o contexto com a string resolvida
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
 // Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
-//String de conex„o com o banco de dados
+//String de conex√£o com o banco de dados
 builder.Services.AddDbContext<AppDbContext>(options => 
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaulConnection")));
 
@@ -43,7 +50,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen( c =>
 {
-    //Habilita a autorizaÁ„o usando Swagger (JWT)
+    //Habilita a autoriza√ß√£o usando Swagger (JWT)
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
     {
         Name = "Authorization",
