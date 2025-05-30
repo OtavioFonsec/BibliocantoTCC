@@ -34,13 +34,17 @@ jobs:
           output_location: "dist" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
 
+      - name: Clean npm cache
+        run: npm cache clean --force
+
       - name: Install dependencies
-        run: npm install
+        run: npm install --unsafe-perm
         working-directory: BibliocantoFront/BibliocantoTCC-MainFront
 
-      - name: Build project
+      - name: Build the app
         run: npm run build
         working-directory: BibliocantoFront/BibliocantoTCC-MainFront
+
 
       - name: Copy staticwebapp.config.json to dist/
         run: cp staticwebapp.config.json dist/
