@@ -35,7 +35,7 @@ jobs:
           ###### End of Repository/Build Configurations ######
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install --unsafe-perm
         working-directory: BibliocantoFront/BibliocantoTCC-MainFront
 
       - name: Build project
