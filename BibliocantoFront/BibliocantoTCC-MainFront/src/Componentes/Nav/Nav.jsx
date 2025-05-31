@@ -61,7 +61,7 @@ export default function Nav() {
       <div className="nav-titulo">
         <img
           className="nav-logo"
-          src="src/assets/BibliocantoTCC-mainlogo.png"
+          src="/src/assets/BibliocantoTCC-mainlogo.png"
           alt="Bibliocanto"
         />
         <h3>Bibliocanto</h3>
