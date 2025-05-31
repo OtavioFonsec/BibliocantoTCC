@@ -175,7 +175,7 @@ export default function BuscaLivroIsbn() {
                   />
                 ) : (
                   <img
-                    src={"src/assets/No Image.png"}
+                    src={"/assets/No Image.png"}
                     alt="Sem imagem disponível"
                     style={{ width: "100%" }}
                   />
@@ -267,7 +267,7 @@ export default function BuscaLivroIsbn() {
 
           <img
             className="isbn_instrucao"
-            src="src/assets/isbn.jpg"
+            src="/assets/isbn.jpg"
             alt="ISBN"
           />
         </div>

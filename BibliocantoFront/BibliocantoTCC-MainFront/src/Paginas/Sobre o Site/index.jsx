@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import logo from '../../assets/BibliocantoTCC-mainlogo.png';
+import logo from '/assets/BibliocantoTCC-mainlogo.png';
 
 export default function SobreSite() {
     return (
