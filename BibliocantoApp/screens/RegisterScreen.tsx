@@ -4,7 +4,7 @@ import { View, Text, TextInput, ActivityIndicator, Alert, TouchableOpacity, Styl
 import { RootStackParamList } from '../routes/StackNavigator';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import api from '../services/api';
-import Icon from "react-native-vector-icons/MaterialIcons";
+import { MaterialIcons } from '@expo/vector-icons';
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
 
@@ -89,7 +89,7 @@ export default function RegisterScreen(){
                 secureTextEntry={!showPassword}
               />
               <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeButton}>
-                <Icon name={showPassword ? "visibility" : "visibility-off"} size={24} color="gray" />
+                <MaterialIcons name={showPassword ? "visibility" : "visibility-off"} size={24} color="gray" />
               </TouchableOpacity>
             </View>
 
@@ -102,7 +102,7 @@ export default function RegisterScreen(){
                 secureTextEntry={!showPassword}
               />
               <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeButton}>
-                <Icon name={showPassword ? "visibility" : "visibility-off"} size={24} color="gray" />
+                <MaterialIcons name={showPassword ? "visibility" : "visibility-off"} size={24} color="gray" />
               </TouchableOpacity>
             </View>
     

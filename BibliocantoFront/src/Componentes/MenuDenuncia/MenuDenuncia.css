@@ -1,0 +1,26 @@
+.botoesdenuncia{
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botoesdenuncia:hover{
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transform: scale(1.30);
+}
+
+.opcaodenuncia{
+    margin-left: 8px;
+    color: black;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.opcaodenuncia:hover{
+    color: black;
+    transform: scale(1.05);
+}

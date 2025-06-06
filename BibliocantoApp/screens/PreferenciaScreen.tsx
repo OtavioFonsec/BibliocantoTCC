@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, TouchableOpacity, ActivityIndicator, StyleSheet, Alert, ScrollView } from "react-native";
+import {
+    View,
+    Text,
+    TouchableOpacity,
+    ActivityIndicator,
+    StyleSheet,
+    Alert,
+    ScrollView,
+} from "react-native";
 import api from "../services/api";
 import NavBar from "../components/NavBar";
 import * as SecureStore from "expo-secure-store";
@@ -16,7 +24,6 @@ export default function PreferenciaScreen() {
     const [selecionados, setSelecionados] = useState<number[]>([]);
 
     useEffect(() => {
-
         const fetchData = async () => {
             try {
                 const response = await api.get("api/Generos");
@@ -33,26 +40,30 @@ export default function PreferenciaScreen() {
             const idUser = await SecureStore.getItemAsync("IdUser");
             if (idUser) {
                 try {
-                    const response = await api.get('api/Preferencias/PreferenciaByUser', {
+                    const response = await api.get("api/Preferencias/PreferenciaByUser", {
                         params: { idUser: idUser },
                     });
 
-                    if(response.data === "Não foi encontrada preferências para os seus usuários."){
+                    if (
+                        response.data ===
+                        "Não foi encontrada preferências para os seus usuários."
+                    ) {
                         return;
                     }
 
-                    const idsSelecionados = response.data.map((item: { idGenero: number }) => item.idGenero);
+                    const idsSelecionados = response.data.map(
+                        (item: { idGenero: number }) => item.idGenero
+                    );
                     setSelecionados(idsSelecionados);
                 } catch (err) {
                     console.error("Erro ao carregar preferências do usuário:", err);
                 }
             }
-        }
+        };
 
         fetchData();
         fetchDataByUser();
     }, []);
-
 
     const limpaPreferenciasAntesDeSalvar = async (idUser: string) => {
         if (idUser) {
@@ -62,7 +73,7 @@ export default function PreferenciaScreen() {
                 console.error("Erro ao limpar preferências:", err);
             }
         }
-    }
+    };
 
     const toggleGenero = (id: number) => {
         if (selecionados.includes(id)) {
@@ -90,14 +101,13 @@ export default function PreferenciaScreen() {
                 return;
             }
 
-            limpaPreferenciasAntesDeSalvar(idUser);
+            await limpaPreferenciasAntesDeSalvar(idUser);
 
             for (const idGenero of selecionados) {
-
                 const data = {
                     idUser: idUser,
                     idGenero: idGenero,
-                }
+                };
 
                 await api.post("api/Preferencias", data);
             }
@@ -111,48 +121,45 @@ export default function PreferenciaScreen() {
 
     return (
         <View style={styles.container}>
-
             <ScrollView contentContainerStyle={styles.scrollContainer}>
-                <View style={{ flex: 1, marginBottom: 10 }}>
-                    <Text style={styles.title}>Escolha até 5 gêneros preferidos</Text>
-                    {error && <Text style={styles.error}>{error}</Text>}
+                <Text style={styles.title}>Escolha até 5 gêneros preferidos</Text>
+                {error && <Text style={styles.error}>{error}</Text>}
 
-                    {loading ? (
-                        <View style={styles.loadingContainer}>
-                            <ActivityIndicator size="large" color="#0000ff" />
-                            <Text style={styles.loadingText}>Carregando gêneros...</Text>
-                        </View>
-                    ) : (
-                        <View style={styles.generosWrapper}>
-                            {generos.map((item) => {
-                                const isSelected = selecionados.includes(item.id);
-                                return (
-                                    <TouchableOpacity
-                                        key={item.id}
-                                        onPress={() => toggleGenero(item.id)}
+                {loading ? (
+                    <View style={styles.loadingContainer}>
+                        <ActivityIndicator size="large" color="#0000ff" />
+                        <Text style={styles.loadingText}>Carregando gêneros...</Text>
+                    </View>
+                ) : (
+                    <View style={styles.generosWrapper}>
+                        {generos.map((item) => {
+                            const isSelected = selecionados.includes(item.id);
+                            return (
+                                <TouchableOpacity
+                                    key={item.id}
+                                    onPress={() => toggleGenero(item.id)}
+                                    style={[
+                                        styles.generoCard,
+                                        isSelected && styles.generoSelecionado,
+                                    ]}
+                                >
+                                    <Text
                                         style={[
-                                            styles.generoCard,
-                                            isSelected && styles.generoSelecionado,
+                                            styles.generoText,
+                                            isSelected && styles.generoTextSelecionado,
                                         ]}
                                     >
-                                        <Text
-                                            style={[
-                                                styles.generoText,
-                                                isSelected && styles.generoTextSelecionado,
-                                            ]}
-                                        >
-                                            {item.nomegenero}
-                                        </Text>
-                                    </TouchableOpacity>
-                                );
-                            })}
-                        </View>
-                    )}
+                                        {item.nomegenero}
+                                    </Text>
+                                </TouchableOpacity>
+                            );
+                        })}
+                    </View>
+                )}
 
-                    <TouchableOpacity style={styles.confirmarButton} onPress={handleConfirmar}>
-                        <Text style={styles.confirmarText}>Confirmar Preferências</Text>
-                    </TouchableOpacity>
-                </View>
+                <TouchableOpacity style={styles.confirmarButton} onPress={handleConfirmar}>
+                    <Text style={styles.confirmarText}>Confirmar Preferências</Text>
+                </TouchableOpacity>
             </ScrollView>
 
             <NavBar />
@@ -165,12 +172,17 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: "#F0F2F5",
     },
+    scrollContainer: {
+        padding: 16,
+        paddingBottom: 100, // Espaço para não sobrepor a NavBar
+    },
     title: {
-        fontSize: 18,
+        fontSize: 20,
         textAlign: "center",
-        marginBottom: 10,
+        marginBottom: 16,
         marginTop: 20,
         fontWeight: "bold",
+        color: "#333",
     },
     error: {
         color: "red",
@@ -178,23 +190,26 @@ const styles = StyleSheet.create({
         textAlign: "center",
         marginBottom: 10,
     },
-    scrollContainer: {
-        paddingHorizontal: 10,
-        paddingBottom: 20,
-    },
     generosWrapper: {
         flexDirection: "row",
         flexWrap: "wrap",
         justifyContent: "center",
+        marginBottom: 20,
     },
     generoCard: {
-        padding: 15,
+        paddingVertical: 12,
+        paddingHorizontal: 18,
         margin: 6,
         backgroundColor: "#fff",
         borderColor: "#ccc",
         borderWidth: 1,
         borderRadius: 8,
         alignItems: "center",
+        elevation: 2, // sombra no Android
+        shadowColor: "#000", // sombra no iOS
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 2,
     },
     generoSelecionado: {
         backgroundColor: "#007bff",
@@ -209,9 +224,9 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
     },
     loadingContainer: {
-        flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        marginVertical: 20,
     },
     loadingText: {
         marginTop: 10,
@@ -219,11 +234,10 @@ const styles = StyleSheet.create({
     },
     confirmarButton: {
         backgroundColor: "#28a745",
-        padding: 12,
-        marginHorizontal: 20,
+        padding: 14,
         borderRadius: 8,
         alignItems: "center",
-        marginTop: 12,
+        marginHorizontal: 20,
     },
     confirmarText: {
         color: "#fff",

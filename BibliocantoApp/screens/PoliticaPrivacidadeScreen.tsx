@@ -107,31 +107,35 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   section: {
-    flex: 1,
+    paddingBottom: 50,
   },
   h1: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
+    color: 'black',
   },
   h2: {
     fontSize: 20,
     fontWeight: 'bold',
     marginTop: 20,
     marginBottom: 10,
+    color: 'black',
   },
   h3: {
     fontSize: 18,
     fontWeight: 'bold',
     marginTop: 15,
     marginBottom: 8,
+    color: 'black',
   },
   paragraph: {
     fontSize: 16,
     lineHeight: 24,
     marginBottom: 12,
     textAlign: 'justify',
+    color: '#333333',
   },
   list: {
     marginBottom: 12,
@@ -141,8 +145,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 24,
     marginBottom: 6,
+    color: '#333333',
   },
   bold: {
     fontWeight: 'bold',
+    color: '#000', // pode deixar mais forte se desejar
   },
 });

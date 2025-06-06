@@ -4,7 +4,7 @@ import { View, Text, TextInput, Button, Alert, StyleSheet, ActivityIndicator, To
 import { RootStackParamList } from '../routes/StackNavigator';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import api from '../services/api';
-import Icon from "react-native-vector-icons/MaterialIcons";
+import { MaterialIcons } from '@expo/vector-icons';
 
 export default function ResetPasswordScreen() {
   const route = useRoute();
@@ -74,7 +74,7 @@ export default function ResetPasswordScreen() {
           secureTextEntry={!showPassword}
         />
         <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeButton}>
-          <Icon name={showPassword ? "visibility" : "visibility-off"} size={24} color="gray" />
+          <MaterialIcons name={showPassword ? "visibility" : "visibility-off"} size={24} color="gray" />
         </TouchableOpacity>
       </View>
 
@@ -88,7 +88,7 @@ export default function ResetPasswordScreen() {
           secureTextEntry={!showPassword}
         />
         <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeButton}>
-          <Icon name={showPassword ? "visibility" : "visibility-off"} size={24} color="gray" />
+          <MaterialIcons name={showPassword ? "visibility" : "visibility-off"} size={24} color="gray" />
         </TouchableOpacity>
       </View>
 

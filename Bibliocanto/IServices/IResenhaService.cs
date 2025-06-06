@@ -9,6 +9,7 @@ namespace Bibliocanto.IServices
         Task<IEnumerable<Resenha>> GetByUser(string idUser);
         Task<Resenha> GetByLivroUser(string idUser, int idLivro);
         Task<Resenha> GetById(int id);
+        Task<Resenha> GetResenhaMaisCurtida();
         Task<ResenhaResponse> Create(Resenha resenha);
         Task<ResenhaResponse> Update(int id, Resenha resenha);
         Task<ResenhaResponse> Delete(int id);

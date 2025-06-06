@@ -1,31 +1,39 @@
 {
   "expo": {
-    "name": "BibliocantoApp",
+    "name": "Bibliocanto",
     "slug": "BibliocantoApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/iconbb.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/BibliocantoTCC-mainlogo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
+    },
+    "androidNavigationBar": {
+      "barStyle": "light",
+      "backgroundColor": "#000000"
     },
     "ios": {
       "supportsTablet": true
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+      "package": "com.marcosvc13.bibliocanto",
+      "versionCode": 1,
+      "permissions": []
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-secure-store"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "16e859ef-fc15-40cc-b233-a1667a56889b"
+      }
+    }
   }
 }

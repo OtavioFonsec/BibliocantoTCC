@@ -51,6 +51,40 @@ namespace Bibliocanto.Controllers
             }
         }
 
+        [HttpGet("GetResenhaMaisCurtida")]
+        public async Task<ActionResult<object>> GetResenhaMaisCurtida()
+        {
+            try
+            {
+                var resenha = await _resenhaService.GetResenhaMaisCurtida();
+
+                if (resenha == null)
+                {
+                    return NotFound("Avaliação não encontrada.");
+                }
+
+                var resultado = new
+                {
+                    resenha.Id,
+                    resenha.IdLivro,
+                    resenha.IdUser,
+                    resenha.TextoResenha,
+                    Usuario = new
+                    {
+                        resenha.Usuario?.Id,
+                        resenha.Usuario?.Email
+                    }
+                };
+
+                return Ok(resultado);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return BadRequest("Request Inválido");
+            }
+        }
+
 
         [HttpGet("ResenhaByUser")]
         public async Task<ActionResult<IEnumerable<object>>> GetByUser([FromQuery] string idUser)

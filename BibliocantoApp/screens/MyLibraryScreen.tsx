@@ -65,7 +65,7 @@ export default function MyLibraryScreen() {
         <View style={{ width: "100%"}}>
           <TabBar currentScreen="Todos"/>
         </View>
-        <View style={{ flex: 1, marginBottom:115 }}>
+        <View style={{ flex: 1, marginBottom: 75 }}>
           {error && <Text style={styles.error}>{error}</Text>}
 
           {loading ? (

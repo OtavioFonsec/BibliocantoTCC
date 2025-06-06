@@ -36,6 +36,20 @@ namespace Bibliocanto.Repository
             return await _context.Resenha.Include(n => n.Usuario).FirstOrDefaultAsync(l => l.Id == id);
         }
 
+        public async Task<Resenha> GetResenhaMaisCurtida()
+        {
+            var resenhaMaisCurtida = await _context.LikeResenha.Where(m => m.Like == 1)
+                    .GroupBy(m => m.IdResenha).OrderByDescending(g => g.Count()).Select(g => g.Key).FirstOrDefaultAsync();
+
+            if (resenhaMaisCurtida == 0)
+            {
+                return null;
+            };
+
+            return await _context.Resenha.Include(n => n.Usuario).FirstOrDefaultAsync(l => l.Id == resenhaMaisCurtida);
+
+        }
+
         public async Task Create(Resenha resenha)
         {
             await _context.Resenha.AddAsync(resenha);

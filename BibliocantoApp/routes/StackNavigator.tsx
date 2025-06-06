@@ -16,7 +16,7 @@ import SobreSite from '../screens/SobreSiteScreen';
 import PoliticaPrivacidade from '../screens/PoliticaPrivacidadeScreen';
 import Perfil from '../screens/PerfilScreen';
 import NewHome from '../screens/NewHomeScreen';
-import Preferencias from '../screens/PreferenciaScreen'; 
+import Preferencias from '../screens/PreferenciaScreen';
 import { Image } from 'react-native';
 
 export type RootStackParamList = {
@@ -41,12 +41,18 @@ export type RootStackParamList = {
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-// #cdbda1
-
 export default function StackNavigator() {
   return (
-    <Stack.Navigator initialRouteName="Login">
-      <Stack.Screen name="Register" component={RegisterScreen} options={{ title: 'Cadastro'}} />
+    <Stack.Navigator initialRouteName="Login"
+      screenOptions={{
+        headerStyle: { backgroundColor: 'white' },
+        headerTintColor: '#000',
+        headerTitleAlign: 'left',
+        headerTitleStyle: { fontWeight: 'bold' },
+        contentStyle: { backgroundColor: '#fff' }, // fundo das telas
+      }}
+    >
+      <Stack.Screen name="Register" component={RegisterScreen} options={{ title: 'Cadastro' }} />
       <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'Login', headerBackVisible: false, headerShown: false }} />
       <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Acervo', headerTitleAlign: 'center' }} />
       <Stack.Screen

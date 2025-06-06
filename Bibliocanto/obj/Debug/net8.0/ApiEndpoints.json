@@ -2173,6 +2173,26 @@
   },
   {
     "ContainingType": "Bibliocanto.Controllers.LivrosController",
+    "Method": "GetLivroMaisLido",
+    "RelativePath": "api/Livros/GetLivroMaisLido",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Bibliocanto.Resources.LivrosResource",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Bibliocanto.Controllers.LivrosController",
     "Method": "GetLivrosByName",
     "RelativePath": "api/Livros/LivroByName",
     "HttpMethod": "GET",
@@ -2763,6 +2783,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Bibliocanto.Controllers.ResenhaController",
+    "Method": "GetResenhaMaisCurtida",
+    "RelativePath": "api/Resenha/GetResenhaMaisCurtida",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

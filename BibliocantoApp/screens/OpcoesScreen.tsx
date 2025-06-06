@@ -4,7 +4,7 @@ import { useNavigation, NavigationProp } from '@react-navigation/native';
 import * as SecureStore from 'expo-secure-store';
 import { RootStackParamList } from '../routes/StackNavigator';
 import api from '../services/api';
-import Icon from "react-native-vector-icons/MaterialIcons";
+import { MaterialIcons } from '@expo/vector-icons';
 import NavBar from "../components/NavBar";
 
 export default function OpcoesScreen() {
@@ -80,23 +80,23 @@ export default function OpcoesScreen() {
 
             <View style={styles.optionsContainer}>
                 <TouchableOpacity style={styles.button} onPress={verificaPerfil}>
-                    <Icon name="person" style={styles.iconDefault} />
+                    <MaterialIcons name="person" style={styles.iconDefault} />
                     <Text style={styles.buttonText}>Perfil do usuário</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('PoliticaPrivacidade')}>
-                    <Icon name="lock" style={styles.iconDefault} />
+                    <MaterialIcons name="lock" style={styles.iconDefault} />
                     <Text style={styles.buttonText}>Política de privacidade</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('SobreSite')}>
-                    <Icon name="info" style={styles.iconDefault} />
+                    <MaterialIcons name="info" style={styles.iconDefault} />
                     <Text style={styles.buttonText}>Sobre o bibliocanto</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Preferencias')}>
-                    <Icon name="settings" style={styles.iconDefault} />
+                    <MaterialIcons name="settings" style={styles.iconDefault} />
                     <Text style={styles.buttonText}>Preferências</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button} onPress={handleLogout}>
-                    <Icon name="logout" style={styles.iconDefault} />
+                    <MaterialIcons name="logout" style={styles.iconDefault} />
                     <Text style={styles.buttonText}>Sair</Text>
                 </TouchableOpacity>
             </View>

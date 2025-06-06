@@ -9,7 +9,7 @@ import {
     Button,
     Alert
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@expo/vector-icons';
 import * as SecureStore from "expo-secure-store";
 import api from "../services/api";
 
@@ -115,7 +115,7 @@ export default function MenuDenuncia({ tipo, idResenha, idComentario }: Props) {
                     hitSlop={{ top: 20, left: 20, right: 20, bottom: 20 }}
                     onPress={handleMenuDropDown}
                 >
-                    <Icon name="more-vert" size={20} color="black" />
+                    <MaterialIcons name="more-vert" size={20} color="black" />
                 </TouchableOpacity>
 
                 {menuDropDown && (
@@ -125,7 +125,7 @@ export default function MenuDenuncia({ tipo, idResenha, idComentario }: Props) {
                             hitSlop={{ top: 20, left: 15, right: 15, bottom: 5 }}
                             style={[styles.buttonMenuDrop, styles.paddingB10]}
                         >
-                            <Icon name="warning" size={18} color="black" />
+                            <MaterialIcons name="warning" size={18} color="black" />
                             <Text style={styles.textMenuDrop}>Fazer Denúncia</Text>
                         </TouchableOpacity>
                     </View>

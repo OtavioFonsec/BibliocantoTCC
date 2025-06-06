@@ -67,7 +67,7 @@ export default function ReadScreen() {
         <TabBar currentScreen="Lidos"/>
       </View>
       
-      <View style={{ flex: 1, marginBottom: 115 }}>
+      <View style={{ flex: 1, marginBottom: 75 }}>
         {error && <Text style={styles.error}>{error}</Text>}
 
         {loading ? (

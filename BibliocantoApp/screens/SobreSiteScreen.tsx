@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
   },
   section: {
     alignItems: 'center',
+    paddingBottom: 50,
   },
   logo: {
     width: 200,
@@ -48,6 +49,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
+    color: 'black', // azul escuro para o título
   },
   content: {
     width: '100%',
@@ -57,8 +59,10 @@ const styles = StyleSheet.create({
     lineHeight: 24,
     marginBottom: 16,
     textAlign: 'justify',
+    color: '#333333', // cinza escuro para boa leitura
   },
   bold: {
     fontWeight: 'bold',
+    color: '#000000', // preto para destacar
   },
 });

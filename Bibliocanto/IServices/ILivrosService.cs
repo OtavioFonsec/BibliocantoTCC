@@ -6,6 +6,7 @@ namespace Bibliocanto.IServices
     public interface ILivrosService
     {
         Task<IEnumerable<Livros>> GetBaseLivros();
+        Task<Livros> GetLivroMaisLido();
         Task<IEnumerable<Livros>> GetLivrosByIdEditora(int id);
         Task<IEnumerable<Livros>> GetLivrosByIdUser(string idUser);
         Task<Livros> GetLivroById(int id);

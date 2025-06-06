@@ -452,7 +452,7 @@ export default function BookScreen() {
                                 <Text style={styles.text}>Autor(es): {autores.length > 0 ? autores.join(", ") : "Autor do livro"}</Text>
                                 <Text style={styles.text}>Gênero(s): {generos.length > 0 ? generos.join(", ") : "Gênero do livro"}</Text>
                                 <Text style={styles.text}>Editora: {selectedLivro?.editoras?.nomeEditora || "Editora do livro"}</Text>
-                                <Text style={styles.text}>ISBN: {selectedLivro ? selectedLivro.isbn : "ISBN"}</Text>
+                                <Text style={styles.textUltimo}>ISBN: {selectedLivro ? selectedLivro.isbn : "ISBN"}</Text>
                             </View>
                         </View>
                     </View>
@@ -483,6 +483,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 22,
+        color: "#333",
         fontWeight: "bold",
     },
     body: {
@@ -510,6 +511,11 @@ const styles = StyleSheet.create({
     },
     text: {
         marginBottom: 5,
+        textAlign: "justify",
+        color: "#444",
+    },
+    textUltimo: {
+        marginBottom: 50,
         textAlign: "justify",
     },
     footer: {

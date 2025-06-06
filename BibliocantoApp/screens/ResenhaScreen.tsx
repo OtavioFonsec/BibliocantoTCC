@@ -4,7 +4,7 @@ import { View, Text, ActivityIndicator, StyleSheet, FlatList } from "react-nativ
 import api from "../services/api";
 import NavBar from "../components/NavBar";
 import TabBarLivro from "../components/TabBarLivro";
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@expo/vector-icons';
 import MenuDenuncia from '../components/MenuDropDown';
 
 interface Resenha {
@@ -66,7 +66,7 @@ export default function HomeScreen() {
                 idComentario={0}
               />
               <View style={styles.headerResenha}>
-                <Icon name="person" size={20} color="#333" style={styles.userIcon} />
+                <MaterialIcons name="person" size={20} color="#333" style={styles.userIcon} />
                 <Text style={styles.userIdText}>{item.usuario.email}</Text>
               </View>
               <View style={styles.separator} />

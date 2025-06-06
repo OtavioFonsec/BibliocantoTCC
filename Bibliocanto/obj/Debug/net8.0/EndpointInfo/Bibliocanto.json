@@ -3494,6 +3494,35 @@
         }
       }
     },
+    "/api/Livros/GetLivroMaisLido": {
+      "get": {
+        "tags": [
+          "Livros"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/LivrosResource"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LivrosResource"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LivrosResource"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Livros/ByIdEditora": {
       "get": {
         "tags": [
@@ -4592,6 +4621,18 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/Resenha/GetResenhaMaisCurtida": {
+      "get": {
+        "tags": [
+          "Resenha"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }

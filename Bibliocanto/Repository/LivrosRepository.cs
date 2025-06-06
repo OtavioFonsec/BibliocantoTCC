@@ -17,6 +17,21 @@ namespace Bibliocanto.Repository
             return await _context.Livros.Include(d => d.Editoras).ToListAsync();
         }
 
+        public async Task<Livros> GetLivroMaisLido()
+        {
+            var livroMaisLidoId = await _context.MeusLivros
+                .Where(m => m.Lido == 1)
+                .GroupBy(m => m.IdLivro)
+                .OrderByDescending(g => g.Count())
+                .Select(g => g.Key)
+                .FirstOrDefaultAsync();
+
+            if (livroMaisLidoId == 0)
+                return null;
+
+            return await _context.Livros.FirstOrDefaultAsync(l => l.Id == livroMaisLidoId);
+        }
+
         public async Task<IEnumerable<Livros>> GetLivrosByNome(string nome)
         {
             return await _context.Livros.Where(l => l.Titulo.Contains(nome)).Include(d => d.Editoras).ToListAsync();

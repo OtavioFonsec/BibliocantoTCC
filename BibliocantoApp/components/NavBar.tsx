@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigation, NavigationProp } from "@react-navigation/native";
 import { RootStackParamList } from '../routes/StackNavigator';
 import { View, TouchableOpacity, StyleSheet, Text } from "react-native";
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { MaterialIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export default function NavBar() {
@@ -13,19 +13,19 @@ export default function NavBar() {
         <View style={[styles.navbar, { bottom: insets.bottom }]} >
 
             <TouchableOpacity onPress={() => navigation.navigate('NewHome')} style={styles.button}>
-                <Icon name="home" size={24} color="black" />
+                <MaterialIcons name="home" size={24} color="black" />
                 <Text style={styles.text}>Início</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.button}>
-                <Icon name="book" size={24} color="black" />
+                <MaterialIcons name="book" size={24} color="black" />
                 <Text style={styles.text}>Acervo</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('MyLibrary')} style={styles.button}>
-                <Icon name="bookmarks" size={24} color="black" />
+                <MaterialIcons name="bookmarks" size={24} color="black" />
                 <Text style={styles.text}>Meus Livros</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('OpcoesScreen')} style={styles.button}>
-                <Icon name="person" size={30} color="black" />
+                <MaterialIcons name="person" size={30} color="black" />
                 <Text style={styles.text}>Perfil</Text>
             </TouchableOpacity>
         </View>

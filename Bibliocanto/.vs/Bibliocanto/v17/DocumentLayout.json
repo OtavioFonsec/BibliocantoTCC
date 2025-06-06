@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|d:\\sistemas de informa\u00E7\u00E3o\\tcc\\bibliocantotcc\\bibliocanto\\controllers\\editorascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|solutionrelative:controllers\\editorascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|d:\\sistemas de informa\u00E7\u00E3o\\tcc\\bibliocantotcc\\bibliocanto\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|d:\\sistemas de informa\u00E7\u00E3o\\tcc\\bibliocantotcc\\bibliocanto\\controllers\\resenhacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|solutionrelative:controllers\\resenhacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|d:\\sistemas de informa\u00E7\u00E3o\\tcc\\bibliocantotcc\\bibliocanto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|d:\\sistemas de informa\u00E7\u00E3o\\tcc\\bibliocantotcc\\bibliocanto\\controllers\\livroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|solutionrelative:controllers\\livroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|d:\\sistemas de informa\u00E7\u00E3o\\tcc\\bibliocantotcc\\bibliocanto\\services\\resenhaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|solutionrelative:services\\resenhaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|d:\\sistemas de informa\u00E7\u00E3o\\tcc\\bibliocantotcc\\bibliocanto\\iservices\\iresenhaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|solutionrelative:iservices\\iresenhaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|d:\\sistemas de informa\u00E7\u00E3o\\tcc\\bibliocantotcc\\bibliocanto\\repository\\resenharepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|solutionrelative:repository\\resenharepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|d:\\sistemas de informa\u00E7\u00E3o\\tcc\\bibliocantotcc\\bibliocanto\\irepository\\iresenharepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E44C2857-F8FB-4B39-A0AC-3D51A28B2C15}|Bibliocanto.csproj|solutionrelative:irepository\\iresenharepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,15 +55,100 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EditorasController.cs",
-              "DocumentMoniker": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\Controllers\\EditorasController.cs",
-              "RelativeDocumentMoniker": "Controllers\\EditorasController.cs",
-              "ToolTip": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\Controllers\\EditorasController.cs",
-              "RelativeToolTip": "Controllers\\EditorasController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T19:17:28.174Z",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\appsettings.json*",
+              "RelativeToolTip": "appsettings.json*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-31T22:25:00.68Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T22:24:46.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LivrosController.cs",
+              "DocumentMoniker": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\Controllers\\LivrosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LivrosController.cs",
+              "ToolTip": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\Controllers\\LivrosController.cs",
+              "RelativeToolTip": "Controllers\\LivrosController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:24:54.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ResenhaController.cs",
+              "DocumentMoniker": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\Controllers\\ResenhaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ResenhaController.cs",
+              "ToolTip": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\Controllers\\ResenhaController.cs",
+              "RelativeToolTip": "Controllers\\ResenhaController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:12:10.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ResenhaService.cs",
+              "DocumentMoniker": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\Services\\ResenhaService.cs",
+              "RelativeDocumentMoniker": "Services\\ResenhaService.cs",
+              "ToolTip": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\Services\\ResenhaService.cs",
+              "RelativeToolTip": "Services\\ResenhaService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:11:44.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IResenhaService.cs",
+              "DocumentMoniker": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\IServices\\IResenhaService.cs",
+              "RelativeDocumentMoniker": "IServices\\IResenhaService.cs",
+              "ToolTip": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\IServices\\IResenhaService.cs",
+              "RelativeToolTip": "IServices\\IResenhaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:11:30.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResenhaRepository.cs",
+              "DocumentMoniker": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\Repository\\ResenhaRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\ResenhaRepository.cs",
+              "ToolTip": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\Repository\\ResenhaRepository.cs",
+              "RelativeToolTip": "Repository\\ResenhaRepository.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:07:55.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IResenhaRepository.cs",
+              "DocumentMoniker": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\IRepository\\IResenhaRepository.cs",
+              "RelativeDocumentMoniker": "IRepository\\IResenhaRepository.cs",
+              "ToolTip": "D:\\Sistemas de informa\u00E7\u00E3o\\TCC\\BibliocantoTCC\\Bibliocanto\\IRepository\\IResenhaRepository.cs",
+              "RelativeToolTip": "IRepository\\IResenhaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T01:03:27.826Z"
             }
           ]
         }

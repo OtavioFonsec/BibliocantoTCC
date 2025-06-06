@@ -4,7 +4,7 @@ import { useNavigation, NavigationProp } from '@react-navigation/native';
 import * as SecureStore from 'expo-secure-store';
 import { RootStackParamList } from '../routes/StackNavigator';
 import api from '../services/api';
-import Icon from "react-native-vector-icons/MaterialIcons";
+import { MaterialIcons } from '@expo/vector-icons';
 import { AxiosError } from 'axios';
 
 export default function LoginScreen() {
@@ -63,7 +63,7 @@ export default function LoginScreen() {
             errorMessage += `\n${detalhes}`;
           }
         } else {
-          errorMessage = String(data || '');
+          errorMessage = String(data || 'Houve um erro ao processar a solicitação. Tente novamente mais tarde.');
         }
       } else if (error instanceof Error) {
         errorMessage = error.message;
@@ -109,7 +109,7 @@ export default function LoginScreen() {
           secureTextEntry={!showPassword}
         />
         <TouchableOpacity onPress={() => setShowPassword(!showPassword)} style={styles.eyeButton}>
-          <Icon name={showPassword ? "visibility" : "visibility-off"} size={24} color="gray" />
+          <MaterialIcons name={showPassword ? "visibility" : "visibility-off"} size={24} color="gray" />
         </TouchableOpacity>
       </View>
 
