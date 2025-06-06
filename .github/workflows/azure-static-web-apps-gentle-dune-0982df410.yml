@@ -25,15 +25,15 @@ jobs:
 
       - name: Install dependencies
         run: npm install --unsafe-perm
-        working-directory: BibliocantoFront/BibliocantoTCC-MainFront
+        working-directory: ./BibliocantoFront
 
       - name: Build the app
         run: npm run build
-        working-directory: BibliocantoFront/BibliocantoTCC-MainFront
+        working-directory: ./BibliocantoFront
 
       - name: Copy staticwebapp.config.json to dist/
         run: cp staticwebapp.config.json dist/
-        working-directory: BibliocantoFront/BibliocantoTCC-MainFront
+        working-directory: ./BibliocantoFront
 
       - name: Build And Deploy
         id: builddeploy
