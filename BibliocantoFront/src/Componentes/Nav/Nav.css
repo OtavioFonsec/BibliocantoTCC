@@ -207,11 +207,11 @@
 
 @media (max-height: 690px) {
   .nav-logo {
-    width: 90px;
+    width: 85px;
   }
 
   .nav-subtitulo {
-    font-size: 13px;
+    font-size: 11px;
     margin-top: 0px;
     margin-bottom: 0px;
   }
@@ -225,7 +225,7 @@
   }
 
   .nav-links a {
-    font-size: 13px;
+    font-size: 12px;
     padding: 7px;
   }
 
