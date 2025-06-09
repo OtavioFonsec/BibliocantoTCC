@@ -166,6 +166,7 @@ function CadastroLivro() {
     alert("Por favor, preencha todos os campos obrigatórios antes de finalizar o cadastro.");
     return; // Impede o envio
   }
+    alert("Livro cadastrado com sucesso!");
 
     await atualizarLivro();
     await cadastrarAutoresLivro();
