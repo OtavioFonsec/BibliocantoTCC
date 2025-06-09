@@ -192,7 +192,7 @@ function CadastroLivro() {
         </Form.Group>
 
         <Form.Group as={Col} controlId="formGridTitle">
-          <Form.Label>Title</Form.Label>
+          <Form.Label>Título</Form.Label>
           <Form.Control
             type="text"
             value={titulo} // Usando o estado
@@ -237,7 +237,7 @@ function CadastroLivro() {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formGridPublisher">
-        <Form.Label>Publisher</Form.Label>
+        <Form.Label>Editora</Form.Label>
         <Form.Control
           type="text"
           defaultValue={livro.publisher}
@@ -248,7 +248,7 @@ function CadastroLivro() {
 
       <Row className="mb-3">
       <Form.Group as={Col} controlId="formGridAuthors">
-        <Form.Label>Authors</Form.Label>
+        <Form.Label>Autores</Form.Label>
         {autores.map((author, index) => (
           <Form.Control
             key={`author-${index}`}
@@ -262,7 +262,7 @@ function CadastroLivro() {
       </Form.Group>
 
       <Form.Group as={Col} controlId="formGridSubjects">
-        <Form.Label>Subjects</Form.Label>
+        <Form.Label>Gêneros</Form.Label>
         {generos.map((subject, index) => (
           <Form.Control
             key={`subject-${index}`}
