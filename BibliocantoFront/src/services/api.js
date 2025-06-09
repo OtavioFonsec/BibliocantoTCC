@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://localhost:44331'
-    //baseURL: 'https://bibliocantobackend-ejdcdghpamcydde8.brazilsouth-01.azurewebsites.net'
+    //baseURL: 'https://localhost:44331'
+    baseURL: 'https://bibliocantobackend-ejdcdghpamcydde8.brazilsouth-01.azurewebsites.net'
 });
 
 api.validarToken = async () => {
@@ -114,7 +114,7 @@ api.cadastrarAutores = async function(autoresArmazenados) {
             idAutor: Number(autorIdSingle),
         };
 
-        const response = await axios.post('https://localhost:44331/api/AutorLivro', autorLivroData, {
+        const response = await axios.post('https://bibliocantobackend-ejdcdghpamcydde8.brazilsouth-01.azurewebsites.net/api/AutorLivro', autorLivroData, {
             headers: {
                 Authorization: `Bearer ${getToken()}` // Inclui o token de autorização
             }
@@ -134,7 +134,7 @@ api.cadastrarLivroGenero = async function (idLivro, generoIdSingle) {
             idGenero: Number(generoIdSingle),
         };
 
-        const response = await axios.post('https://localhost:44331/api/GenerosLivro', generoLivroData, {
+        const response = await axios.post('https://bibliocantobackend-ejdcdghpamcydde8.brazilsouth-01.azurewebsites.net/api/GenerosLivro', generoLivroData, {
             headers: {
                 Authorization: `Bearer ${getToken()}` // Inclui o token de autorização
             }
@@ -154,7 +154,7 @@ api.cadastrarEditora = async function (nomeEditora) {
 
         // Tenta verificar se a editora já existe
         try {
-            const verificaExistenciaResponse = await axios.get(`https://localhost:44331/api/Editoras/EditoraByName?name=${nomeEditora}`, {
+            const verificaExistenciaResponse = await axios.get(`https://bibliocantobackend-ejdcdghpamcydde8.brazilsouth-01.azurewebsites.net/api/Editoras/EditoraByName?name=${nomeEditora}`, {
                 headers: {
                     Authorization: `Bearer ${getToken()}`
                 }
@@ -180,7 +180,7 @@ api.cadastrarEditora = async function (nomeEditora) {
 
         // Caso contrário, cadastra uma nova editora
         const response = await axios.post(
-            'https://localhost:44331/api/Editoras',
+            'https://bibliocantobackend-ejdcdghpamcydde8.brazilsouth-01.azurewebsites.net/api/Editoras',
             { nomeEditora },
             {
                 headers: {
@@ -200,7 +200,7 @@ api.cadastrarEditora = async function (nomeEditora) {
 api.PreCadastroLivro = async function (titulo, isbn, editoraId) {
     try {
 
-        const response = await axios.post('https://localhost:44331/api/Livros', 
+        const response = await axios.post('https://bibliocantobackend-ejdcdghpamcydde8.brazilsouth-01.azurewebsites.net/api/Livros', 
             {
                 titulo: titulo,
                 isbn: isbn,
@@ -222,7 +222,7 @@ api.PreCadastroLivro = async function (titulo, isbn, editoraId) {
 //metodo get para buscar os autores do livro
 api.buscarAutoresPorLivro = async function(idLivro) {
     try {
-        const response = await api.get(`https://localhost:44331/api/AutorLivro/livro/${idLivro}`, {
+        const response = await api.get(`https://bibliocantobackend-ejdcdghpamcydde8.brazilsouth-01.azurewebsites.net/api/AutorLivro/livro/${idLivro}`, {
             headers: {
                 Authorization: `Bearer ${getToken()}`
             }
@@ -237,7 +237,7 @@ api.buscarAutoresPorLivro = async function(idLivro) {
 //metodo get para buscar os autores do livro pelo idAutor
 api.buscarLivrosPorAutor = async function(idAutor) {
     try {
-        const response = await api.get(`https://localhost:44331/api/AutorLivro/autor/${idAutor}`, {
+        const response = await api.get(`https://bibliocantobackend-ejdcdghpamcydde8.brazilsouth-01.azurewebsites.net/api/AutorLivro/autor/${idAutor}`, {
             headers: {
                 Authorization: `Bearer ${getToken()}`
             }
@@ -390,7 +390,7 @@ api.getEditoras = async function() {
 api.getEditoraById = async function (editoraId) {
     try {
         const response = await api.get(
-            `https://localhost:44331/api/Editoras/${editoraId}`,
+            `https://bibliocantobackend-ejdcdghpamcydde8.brazilsouth-01.azurewebsites.net/api/Editoras/${editoraId}`,
             {
                 headers: {
                     Authorization: `Bearer ${getToken()}`
@@ -407,7 +407,7 @@ api.getEditoraById = async function (editoraId) {
 api.getLivrosByIdEditora = async function (EditoraId) {
     try {
         const response = await api.get(
-            `https://localhost:44331/api/Livros/ByIdEditora?id=${EditoraId}`,
+            `https://bibliocantobackend-ejdcdghpamcydde8.brazilsouth-01.azurewebsites.net/api/Livros/ByIdEditora?id=${EditoraId}`,
             {
                 headers: {
                     Authorization: `Bearer ${getToken()}`
@@ -442,7 +442,7 @@ api.getGeneros = async function() {
 api.getTodosLivrosByGenero = async function (generoId) {
     try {
         const response = await api.get(
-            `https://localhost:44331/api/GenerosLivro/genero/${generoId}`,
+            `https://bibliocantobackend-ejdcdghpamcydde8.brazilsouth-01.azurewebsites.net/api/GenerosLivro/genero/${generoId}`,
             {
                 headers: {
                     Authorization: `Bearer ${getToken()}`
