@@ -110,7 +110,7 @@ function PreCadastro() {
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridTitle">
-            <Form.Label>Title</Form.Label>
+            <Form.Label>Título</Form.Label>
             <Form.Control
               type="text"
               defaultValue={livro.title}
@@ -121,7 +121,7 @@ function PreCadastro() {
         </Row>
 
         <Form.Group className="mb-3" controlId="formGridPublisher">
-          <Form.Label>Publisher</Form.Label>
+          <Form.Label>Editora</Form.Label>
           <Form.Control
             type="text"
             defaultValue={livro.publisher}
@@ -132,7 +132,7 @@ function PreCadastro() {
 
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridAuthors">
-            <Form.Label>Authors</Form.Label>
+            <Form.Label>Autores</Form.Label>
             {autores.length > 0 ? (
               autores.map((author, index) => (
                 <Form.Control
