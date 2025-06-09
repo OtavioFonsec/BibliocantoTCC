@@ -119,10 +119,10 @@ function PerfilUsuario() {
         </div>
 
         <div className="form-group">
-          <label>Descrição:</label>
+          <label>Sobre você:</label>
           <input
             type="text"
-            name="descricao"
+            name="Sobre você"
             value={perfil.descricao}
             onChange={handleChange}
             disabled={!editando && perfilExistente}
