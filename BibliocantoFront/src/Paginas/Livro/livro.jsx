@@ -824,32 +824,37 @@ function Livro() {
                 )}
 
                 {/* listagem das resenhas */}
-                {Array.isArray(resenhas) && resenhas.length > 0 ? (
-                  <ul className="lista-resenhas">
-                    {resenhas.map((res) => {
-                      return (
-                        <ResenhaItem
-                          key={`resenha-${res.id}`}
-                          res={res}
-                          handleComentar={handleComentar}
-                          resenhaSelecionada={resenhaSelecionada}
-                          setComentarios={setComentarios}
-                          comentarios={comentarios}
-                          enviarComentario={enviarComentario}
-                          buscarComentarios={buscarComentarios}
-                          handleLikeResenha={() => handleLikeResenha(res.id)}
-                          handleLikeComentario={handleLikeComentario}
-                          likesComentarios={likesComentarios}
-                          setLikesComentarios={setLikesComentarios}
-                          idUser={idUser}
-                          deleteResenha={deleteResenha}
-                        />
-                      );
-                    })}
-                  </ul>
-                ) : (
-                  <p>Ainda não há resenhas para este livro.</p>
-                )}
+                {EmailUser ? (
+  Array.isArray(resenhas) && resenhas.length > 0 ? (
+    <ul className="lista-resenhas">
+      {resenhas.map((res) => {
+        return (
+          <ResenhaItem
+            key={`resenha-${res.id}`}
+            res={res}
+            handleComentar={handleComentar}
+            resenhaSelecionada={resenhaSelecionada}
+            setComentarios={setComentarios}
+            comentarios={comentarios}
+            enviarComentario={enviarComentario}
+            buscarComentarios={buscarComentarios}
+            handleLikeResenha={() => handleLikeResenha(res.id)}
+            handleLikeComentario={handleLikeComentario}
+            likesComentarios={likesComentarios}
+            setLikesComentarios={setLikesComentarios}
+            idUser={idUser}
+            deleteResenha={deleteResenha}
+          />
+        );
+      })}
+    </ul>
+  ) : (
+    <p>Ainda não há resenhas para este livro.</p>
+  )
+) : (
+  <p>Você precisa estar logado para ver as resenhas.</p>
+)}
+
               </div>
             </div>
           ) : (
