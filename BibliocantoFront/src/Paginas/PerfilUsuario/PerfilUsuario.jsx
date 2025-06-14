@@ -122,7 +122,7 @@ function PerfilUsuario() {
           <label>Sobre você:</label>
           <input
             type="text"
-            name="Sobre você"
+            name="descricao"
             value={perfil.descricao}
             onChange={handleChange}
             disabled={!editando && perfilExistente}
